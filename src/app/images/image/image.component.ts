@@ -64,7 +64,6 @@ export class ImageComponent implements OnInit {
           ).subscribe();
         }
 
-
         console.log(formValue);
 
   }

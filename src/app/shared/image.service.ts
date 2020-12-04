@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
 import { AngularFireStorage } from '@angular/fire/storage';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -14,14 +13,14 @@ export class ImageService {
   constructor(private firebase: AngularFireDatabase) {
   }
 
-  getImageDetailList() {
+ getImageDetailList() {
     this.imageDetailList = this.firebase.list('imageDetails');
     return this.imageDetailList.snapshotChanges();
   }
 
   insertImageDetails(imageDetails: any){
-    console.log(imageDetails);
-    console.log(imageDetails.caption);
+    // console.log(imageDetails);
+    // console.log(imageDetails.caption);
 
     this.imageDetailList.push({
       caption: imageDetails.caption,
